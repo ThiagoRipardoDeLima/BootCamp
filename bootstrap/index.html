@@ -18,6 +18,9 @@
             .cor2{
                 background-color: #0baaea;
             }
+            @-moz-document url-prefix() {
+                fieldset { display: table-cell; }
+            }
         
         </style>
 
@@ -32,9 +35,9 @@
         </div> -->
 
         <div class="container-fluid">
-            
-            <div class="row"> <!-- style="background-color: darkorange" -->
-                <nav class="navbar navbar-inverse navbar-fixed-top "> <!-- navbar-fixed-top"> -->
+            <!-- TOPO -->
+            <div class="row">
+                <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <button type="button"   
@@ -63,16 +66,56 @@
 
                     </div>
                 </nav>
+            </div>
+            <!-- TOPO -->
 
-                
+            <!-- MENU -->
 
-                
+            <div class="row">
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-condensed table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Curso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Thiago</th>
+                                    <th>Thiago.tga</th>
+                                    <th>SI</th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>Thiago</th>
+                                    <th>Thiago.tga</th>
+                                    <th>SI</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
             </div>
-            <div class="row" style="background-color: darkgreen"></div>
+            
+            <!-- MENU -->
+
+
+
+
+
             <div class="row" style="background-color: darkblue"></div>
             <div class="row" style="background-color: cyan"></div>
             <div class="row" style="background-color: crimson"></div>
         </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="bootstrap3.3.7\js\bootstrap.min.js"></script>
     </body>
 </html> 
