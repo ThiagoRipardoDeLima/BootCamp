@@ -1,0 +1,43 @@
+.menu{
+    background: #337ab7;
+    display:inline-block;
+    white-space: nowrap;
+    width: 40px;
+    transition: width 1s;
+    margin-top: -20px;
+    height: 100vh;
+}
+
+.teste{
+    margin: auto;
+    padding: 0px;
+}
+
+.menu:hover{
+    width: 100%;
+}
+
+.item{
+    overflow: hidden;
+    height: 50px;
+    color: #fff;
+}
+
+.item:hover{
+    background-color: #ccc;
+}
+
+.menu .glyphicon{
+    margin: 12px;
+    width: 12px;
+    color:#fff;
+}
+
+.table > tbody > tr:hover{
+    background-color: cyan;
+}
+
+.bottom{
+    bottom: 0px;
+    position: absolute;
+}

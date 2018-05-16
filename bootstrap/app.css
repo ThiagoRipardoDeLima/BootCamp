@@ -1,0 +1,33 @@
+.menu{
+    background: #337ab7;
+    display:inline-block;
+    white-space: nowrap;
+    width: 50px;
+    transition: width 1s;
+}
+
+@media (min-width: @screen-md-min){
+    .menu:hover{
+        width: 200px;
+    }
+}
+
+.item{
+    overflow: hidden;
+    height: 50px;
+    color: #fff;
+}
+
+.item:hover{
+    background-color: #ccc;
+}
+
+.menu .glyphicon{
+    margin: 15px;
+    width: 50px;
+    color:#fff;
+}
+
+.table > tbody > tr:hover{
+    background-color: cyan;
+}

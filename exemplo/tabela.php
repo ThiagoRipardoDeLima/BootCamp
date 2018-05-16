@@ -7,17 +7,15 @@
     $sql = "SELECT * FROM $tabela";
     $resultado = mysqli_query($conexao,$sql);
 
-    /* print_r(mysqli_fetch_assoc($resultado)); */
-
     echo mysqli_error($conexao);
     
     mysqli_close();
 ?>
 
 
-<div class="row">
-    <div class="container">
-        <div class="text-center"><h2>TABELA</h2></div>
+<!-- <div class="row"> -->
+<!--     <div class="container"> -->
+        <!-- <div class="text-center"><h2>TABELA</h2></div> -->
         <div class="table-responsive">
             <table class="table table-hover table-condensed table-striped">
                 <thead>
@@ -42,6 +40,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    <!-- </div> -->
 
-</div>
+<!-- </div> -->
