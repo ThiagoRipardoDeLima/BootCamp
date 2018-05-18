@@ -1,3 +1,8 @@
+<?php
+    //Ativa buffer que armazena o conteudo da pagina
+    ob_start();
+?>
+
 <?php 
     include("conexao.php");
 ?>
@@ -15,7 +20,7 @@
 
 <!-- <div class="row"> -->
 <!--     <div class="container"> -->
-        <!-- <div class="text-center"><h2>TABELA</h2></div> -->
+        <div class="text-center"><h2>Lista de Alunos</h2></div>
         <div class="table-responsive">
             <table class="table table-hover table-condensed table-striped">
                 <thead>
@@ -40,6 +45,16 @@
                 </tbody>
             </table>
         </div>
-    <!-- </div> -->
+    </div>
 
 <!-- </div> -->
+
+<?php
+    //Recebe o conteudo do buffer
+    $content = ob_get_contents();
+
+    //limpa o buffer
+    ob_end_clean();
+
+    include("index.php");
+?>

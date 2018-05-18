@@ -13,14 +13,6 @@
 
     </head>
     <body>
-        <!-- <div class="container">
-            <H2>Content</H2>
-            <div class="row">
-                <div class="col-xs-4 cor2">.col-xs-6</div>
-                <div class="col-xs-4 cor2">.col-xs-6</div>
-            </div>
-        </div> -->
-
         <div class="container-fluid">
             <!-- TOPO -->
             <div class="row">
@@ -55,42 +47,51 @@
                 </nav>
             </div>
             <!-- TOPO -->
-
-            <!-- TABELA -->
            
             <div class="row">
-                <div class="col-sm-2 col-md-2 teste">
+                <div class="col-xs-2 col-sm-2 col-md-2 teste">
                     <div class="menu">
                         <div class="item">
                             <span class="glyphicon glyphicon-home"></span>
-                            Home
+                            <a onclick = "mudaPagina(this)" data-type="home">Home</a>
                         </div>
                         <div class="item">
                             <span class="glyphicon glyphicon-user"></span>
-                            Alunos
+                            <a onclick = "mudaPagina(this)" data-type="alunos">Alunos</a>
                         </div>
                         <div class="item">
                             <span class="glyphicon glyphicon-education"></span>
-                            Cursos
+                            <a onclick = "mudaPagina(this)" data-type="cursos">Cursos</a>
                         </div>
                         <div class="item">
                             <span class="glyphicon glyphicon-log-out"></span>
-                            Sair
+                            <a onclick = "mudaPagina(this)" data-type="sair">Sair</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-10">
-                    <?php include("tabela.php");?>    
+                <div class="col-xs-10 col-sm-10 col-md-10 fadeIn" >
+                    <?php echo $content; ?>
                 </div>
             </div>
-            
-            
-            <!-- TABELA -->
-            
-                       
+                     
         </div>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            function mudaPagina(pagina){
+                var page = pagina.getAttribute("data-type");
+                page += ".php";
+                console.log(page);
+                $.ajax({
+                    type: 'GET',
+                    url: page,
+
+                    success: function(response) {
+                        window.location.href = page;
+                    },
+                });
+            }
+        </script>
 </html> 
